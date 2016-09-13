@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+<title>login</title>
+<style type="text/css">
+.container{
+    border:2px solid black;
+    padding:40px 20px 40px 100px ;
+    margin: 100px auto;
+    width:25%;
+}
+</style>
+<script type="text/javascript">
+function validateForm()
+{
+var a=document.forms["login"]["uname"].value;
+var b=document.forms["login"]["pass"].value;
+if(a===null||a==="")
+{
+
+	alert("username is blank");
+	return false;
+}
+if(b===null||b==="")
+{
+
+	alert("password is blank");
+	return false;
+}
+else
+return true;
+}
+</script>
+</head>
+<body>	
+<center><h1>ADMIN LOGIN</h1></CENTER>
+
+   <form  class="container" name="login" action="admin.jsp" method="get">
+   	User Name: <input type="text" name="uname" /> <br><br>
+   	Password   :  <input type="password" name="pass" /> <br><br>
+   	<input type="submit" name="btn" value="Login" onclick="return validateForm()" />
+   </form>
+
+</body>
+</html>
+
